@@ -1,0 +1,18 @@
+<html>
+
+    <body>
+        <h2>Prodotti</h2>
+
+        <form th:each="p:${Prodotti}">
+            Id: <span th:text="${p.id}"></span> - nome: <span th:text="${p.nome_prodotto}"></span>
+            <button formaction="/show" method="get">dettagli</button>
+            <button formaction="/edit" method="get">modifica</button>
+            <input type="hidden" name="id" th:value="${p.id}">
+        </form>
+
+        <form action="/create" method="get">
+            <button>Crea un nuovo prodotto</button>
+        </form>        
+    </body>
+
+</html>

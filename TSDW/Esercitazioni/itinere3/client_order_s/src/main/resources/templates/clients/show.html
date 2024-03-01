@@ -1,0 +1,16 @@
+<html>
+
+    <body>
+        <h2>Client</h2>
+
+        <p> Nome: <span th:text="${client.nome}"></span></p>
+        <p> Eta: <span th:text="${client.eta}"></span></p>
+        <p> ID: <span th:text="${client.id}"></span></p>
+
+        <form action="/clients/delete" method="post">
+            <button>elimina</button>
+            <input type="hidden" name="id" th:value="${client.id}">
+        </form>
+    </body>
+
+</html>

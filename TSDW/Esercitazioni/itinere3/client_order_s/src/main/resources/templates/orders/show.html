@@ -1,0 +1,17 @@
+<html>
+
+    <body>
+        <h2>Order</h2>
+
+        <p> Prezzo: <span th:text="${order.prezzo}"></span></p>
+        <p> Tavolo: <span th:text="${order.tavolo}"></span></p>
+        <p> ID: <span th:text="${order.id}"></span></p>
+        <p> Cliente: <span th:text="${order.client.nome}"></span></p>
+
+        <form action="/orders/delete" method="post">
+            <button>elimina</button>
+            <input type="hidden" name="id" th:value="${order.id}">
+        </form>
+    </body>
+
+</html>

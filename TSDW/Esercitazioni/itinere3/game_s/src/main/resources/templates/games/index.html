@@ -1,0 +1,17 @@
+<html>
+
+    <body>
+        <h2>Games</h2>
+        <form th:each="g:${games}">
+            Nome: <sgan th:text="${g.nome}"></span>
+            <button formaction="/games/show" method="get">dettagli</button>
+            <button formaction="/games/edit" method="get">modifica</button>
+            <input type="hidden" name="id" th:value="${g.id}">
+        </form>
+
+        <form action="/games/create" method="get">
+            <button>crea</button>
+        </form>
+    </body>
+
+</hmtl>

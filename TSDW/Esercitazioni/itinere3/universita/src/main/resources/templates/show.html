@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2>Corsi</h2>
+
+    <p>Nome: <span th:text="${corso.id}"></span></p>
+    <p>Nome: <span th:text="${corso.nome}"></span></p>
+    <p>Cfu: <span th:text="${corso.cfu}"></span></p>
+    <p>Dipartimento: <span th:text="${corso.dipartimento}"></span></p>
+
+    <form action="/delete" method="post">
+        <input name="id" type="hidden" th:value="${corso.id}">
+        <button type="submit">Cancella il corso</button>
+    </form>
+</body>
+
+</html>

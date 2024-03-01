@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Forum</title>
+    </head>
+    <body>
+        <h1>Forum Film</h1>
+        <h3>Insert</h3>
+        <form action="script.php" method="post">
+            <input type="hidden" name="action" value="create">
+            <label for="nome">Nome: </label>
+            <input type="text" name="nome" id="nome" required>
+            <br>
+
+            <label for="cognome">Cognome: </label>
+            <input type="text" name="cognome" id="cognome" required>
+            <br>
+
+            <label for="data">Data di nascita: </label>
+            <input type="date" name="data" id="data" required>
+            <br>
+
+            <button type="submit">Inserisci</button>
+        </form>
+
+        <br>
+        <form action="script.php" method="get">
+            <input type="hidden" name="action" value="read">
+            <button type="submit">Mostra database</button>
+        </form>        
+    </body>
+</html>

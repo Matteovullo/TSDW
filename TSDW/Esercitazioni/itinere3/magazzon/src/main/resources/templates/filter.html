@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <h2>Magazzino</h2>
+
+        <form th:each="p:${products}">
+            Nome: <span th:text="${p.name}"></span> - Prezzo: €<span th:text="${p.price}"></span>
+            <button formaction="/show" method="GET">Dettagli</button>
+            <button formaction="/edit" method="GET">Modifica</button>
+            <input type="hidden" name="id" th:value="${p.id}">
+        </form> 
+
+        <form action="/filter" method="GET">
+            <button type="submit" name="action" value="unfilter">Vedi tutti</button>
+        </form><br>
+        
+        <form action="/create" method="GET">
+            <button>Crea un nuovo prodotto</button>
+        </form>
+
+    </body>
+</html>

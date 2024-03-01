@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2>Corsi</h2>
+
+    <form th:each="corso : ${Corsi}">
+        Nome: <span th:text="${corso.nome}"></span>
+        <button formaction="/show" formmethod="get">dettagli</button>
+        <button formaction="/edit" formmethod="get">modifica</button>
+        <input name="id" type="hidden" th:value="${corso.id}">
+    </form>
+
+    <form action="/create" method="get">
+        <button>Crea un corso</button>
+    </form>
+</body>
+
+</html>

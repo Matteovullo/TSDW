@@ -1,0 +1,17 @@
+<html>
+
+    <body>
+        <h1>Magazzino</h1>
+
+        <li>ID: <span th:text="${product.id}"></span></li>
+        <li>name: <span th:text="${product.name}"></span></li>
+        <li>price: <span th:text="${product.price}"></span></li>
+        <li>quantity: <span th:text="${product.quantity}"></span></li>
+
+        <form action="/delete" method="post">
+            <input type="hidden" name="id" th:value="${p.id}">
+            <button>elimina</button>
+        </form><br>
+    </body>
+
+</html>

@@ -1,0 +1,3 @@
+l'archivio "demo complete.zip" comprende l'intera cartella del progetto ed include quindi TUTTI i file. Potrebbero esserci dei riferimenti a file o cartelle da modificare.
+
+l'archivio "demo.zip" include SOLO i sorgenti effettivamente utili per la consultazione. Per utilizzarli é quindi necessario creare prima un progetto.

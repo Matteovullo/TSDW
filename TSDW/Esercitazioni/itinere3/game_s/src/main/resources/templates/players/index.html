@@ -1,0 +1,17 @@
+<html>
+
+    <body>
+        <h2>Player</h2>
+        <form th:each="p:${players}">
+            Nome: <span th:text="${p.nome}"></span>
+            <button formaction="/players/show" method="get">dettagli</button>
+            <button formaction="/players/edit" method="get">modifica</button>
+            <input type="hidden" name="id" th:value="${p.id}">
+        </form>
+
+        <form action="/players/create" method="get">
+            <button>crea</button>
+        </form>
+    </body>
+
+</hmtl>

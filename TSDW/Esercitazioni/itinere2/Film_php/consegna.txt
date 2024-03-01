@@ -1,0 +1,8 @@
+Esercizio 1: Gli attori - insert into
+Creare un form che consente all’utente di inserire i dati di un attore: nome, cognome e data di nascita.
+Tale form deve inviare i dati al server con metodo post e memorizzare i dati all'interno della tabella "attori" del db "film_attori" che trovi al seguente link.
+Puoi usare come esempio guida quello visto in classe che permette di inserire i dati all'interno della tabella "generi".
+
+Esercizio 2: Gli attori - visualizza dati 
+Usando il database dell'esercizio 1 creare una pagina html che consenta all’utente di cliccare in un link che lo redirige in una pagina .php in grado di mostrare i valori contenuti nella tabella attori del database. 
+Puoi usare come esempio guida quello che permette di visualizzare i dati contenuti all'interno della tabella "generi"

@@ -1,0 +1,20 @@
+<html>
+
+    <body>
+        <h2>Games</h2>
+
+        <form action="/players/update" method="post">
+            Nome: <input type="text" name="nome" required>
+            Prezzo: <input type="text" name="price" required>
+            Player:
+            <select name="player" required>
+                <div th:each="p:${players}">
+                    <option th:value="${p.id}"><span th:text="${p.nome}"></span></option>
+            </select>
+
+            <button>modifica</button>
+        </form>
+        
+    </body>
+
+</hmtl>

@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <h2>Index</h2>
+        
+        <form th:each="c:${clients}">
+            <p>Name: <span th:text="${c.nome}"></span>
+            <button formaction="/clients/show" method="GET">Show</button>
+            <button formaction="/clients/edit" method="GET">Edit</button>
+            <input type="hidden" name="id" th:value="${c.id}">
+        </form>
+        <br>
+        <form action="clients/create" method="GET">
+            <button>Create new client</button>
+        </form>
+
+        <br><a href="../"><button>Back to Welcome</button></a>
+    </body>
+</html>

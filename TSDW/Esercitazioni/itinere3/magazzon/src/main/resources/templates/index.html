@@ -1,0 +1,22 @@
+<html>
+
+    <body>
+        <h1>Magazzino</h1>
+
+        <form th:each="p:${products}">
+            name: <spam th:text="${p.name}"></spam> - price: <spam th:text="${p.price}"></spam> - quantity: <spam th:text="${p.quantity}"></spam>
+            <button formaction="/show" method="get">dettagli</button>
+            <button formaction="/edit" method="get">modfica</button>
+            <input type="hidden" name="id" th:value="${p.id}">
+        </form>
+
+        <form action="/filter" method="GET">
+            <button type="submit" name="action" value="filter">Filtra</button>
+        </form><br>
+        
+        <form action="/create" method="GET">
+            <button>Crea un nuovo prodotto</button>
+        </form>
+    </body>
+
+</html>

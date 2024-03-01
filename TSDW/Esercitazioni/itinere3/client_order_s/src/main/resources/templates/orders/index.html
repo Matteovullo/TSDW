@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <h2>Index</h2>
+        
+        <form th:each="o:${orders}">
+            <p>Tavolo: <span th:text="${o.tavolo}"></span>
+            <button formaction="/orders/show" method="GET">Show</button>
+            <button formaction="/orders/edit" method="GET">Edit</button>
+            <input type="hidden" name="id" th:value="${o.id}">
+        </form>
+        <br>
+        <form action="orders/create" method="GET">
+            <button>Create new order</button>
+        </form>
+
+        <br><a href="../"><button>Back to Welcome</button></a>
+    </body>
+</html>

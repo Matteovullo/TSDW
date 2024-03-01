@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Film</title>
+    </head>
+    <body>
+        <h1>Database film</h1>
+        <h3>Inserimento</h3>
+        <form action="script.php" method="post">
+            <label for="titolo">Titolo: </label>
+            <input type="text" id="titolo" name="titolo">
+            <br>
+
+            <label for="anno">Anno: </label>
+            <input type="text" id="anno" name="anno">
+            <br>
+
+            <label for="paese">Paese: </label>
+            <input type="text" id="paese" name="paese">
+            <br>
+
+            <label for="regista">Regista: </label>
+            <input type="text" id="regista" name="regista">
+            <br>
+            <br>
+            <button type="submit">Insert</button>
+            <input type="hidden" name="action" value="create">
+        </form>
+        <br>
+
+        <h3>Recupero database</h3>
+        <form action="script.php" method="get">
+            <button type="submit">SHOW ALL</button>
+            <input type="hidden" name="action" value="read">
+        </form>
+    </body>
+</html>

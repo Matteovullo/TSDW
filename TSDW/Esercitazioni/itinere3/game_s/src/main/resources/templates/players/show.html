@@ -1,0 +1,17 @@
+<html>
+
+    <body>
+        <h2>Player</h2>
+
+        ID: <span th:text="${p.id}"></span>
+        Nome: <span th:text="${p.nome}"></span>
+        Eta: <span th:text="${p.eta}"></span>
+
+        <form action="/players/delete" method="post">
+            <button>elimina</button>
+            <input type="hidden" name="id" th:value="${p.id}">
+        </form>
+
+    </body>
+
+</hmtl>

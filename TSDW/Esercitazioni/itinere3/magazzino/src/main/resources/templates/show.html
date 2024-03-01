@@ -1,0 +1,17 @@
+<html>
+
+    <body>
+        <h2>Prodotti</h2>
+
+        <p> Id: <span th:text="${p.id}"></span></p>
+        <p> nome: <span th:text="${p.nome_prodotto}"></span></p>
+        <p> quantita: <span th:text="${p.giacenza}"></span></p>
+        <p> prezzo: <span th:text="${p.prezzo}"></span></p>
+
+        <form action="/delete" method="post">
+            <input type="hidden" name="id" th:value="${p.id}">
+            <button>elimina i prodotto</button>
+        </form>
+    </body>
+
+</html>

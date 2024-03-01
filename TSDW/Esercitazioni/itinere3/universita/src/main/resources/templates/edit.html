@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2>Corsi</h2>
+
+    <form action="/update" method="post" th:object="${corso}">
+        Nome: <input name="nome" type="text" th:field="*{nome}" required>
+        Cfu: <input name="cfu" type="text" th:field="*{cfu}" required>
+        Dipartimento: <input name="dipartimento" type="text" th:field="*{dipartimento}" required>
+        <input name="id" type="hidden" th:field="*{id}" required>
+        <button type="submit">modifica</button>
+    </form>
+
+</body>
+
+</html>

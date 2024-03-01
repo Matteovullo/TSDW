@@ -1,0 +1,20 @@
+<html>
+
+    <body>
+        <h2>Order</h2>
+
+        <form action="/orders/update" method="post">
+            Prezzo: <input type="text" name="prezzo" required>
+            Tavolo: <input type="text" name="tavolo" required>
+            Cliente:
+            <select name="client" required>
+                <div th:each="c:${clients}">
+                    <option th:value="${c.id}"><span th:text="${c.nome}"></span></option>
+                </div>
+            </select>
+            <input type="hidden" name="id" th:value="${order.id}">
+            <button>modifica</button>
+        </form>
+    </body>
+
+</html>
